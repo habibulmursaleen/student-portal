@@ -18,16 +18,54 @@ const Quiz = () => {
   const { id: userId, name: userName } = loggedInUser || {};
   const { title } = video;
   const totalQuiz = quizes?.length;
-  let totalMark = quizes?.length * 5;
-
-  const [mark, setMark] = useState(0);
+  let totalMark = quizes?.length ? quizes.length * 5 : 0;
+  const [quizIndex, setQuizIndex] = useState(0);
+  const [selectedOption, setSelectedOption] = useState(null);
   const [totalCorrect, setTotalCorrect] = useState(0);
-  const [totalWrong, setTotalWrong] = useState(0);
 
-  const handleQuizSubmit = (marks) => {
-    setMark(totalCorrect * 5);
-    setTotalCorrect(1);
-    setTotalWrong(quizes?.length - totalCorrect);
+  const handleOptionChange = (optionId) => {
+    setSelectedOption(optionId);
+  };
+
+  const handleSubmit = (newScore) => {
+    const updatedTotalCorrect = totalCorrect + newScore;
+    setTotalCorrect(updatedTotalCorrect);
+
+    submitQuiz({
+      student_id: userId,
+      student_name: userName,
+      video_id: Number(videoId),
+      video_title: title,
+      totalQuiz,
+      totalMark,
+      totalCorrect: updatedTotalCorrect,
+      totalWrong: quizes?.length - updatedTotalCorrect,
+      mark: updatedTotalCorrect * 5,
+    });
+  };
+
+  const handleNextClick = () => {
+    // Check if an option has been selected
+    if (selectedOption === null) {
+      return;
+    }
+
+    // Check if this is the last quiz
+    if (quizIndex === quizes.length - 1) {
+      // Calculate the score
+      const newScore = quizes.reduce((acc, quiz) => {
+        const correctOption = quiz.options.find((option) => option.isCorrect);
+        const isOptionCorrect = selectedOption === correctOption.id;
+        return acc + isOptionCorrect;
+      }, 0);
+
+      // Submit quiz
+      handleSubmit(newScore);
+    } else {
+      // Move to the next quiz
+      setQuizIndex(quizIndex + 1);
+      setSelectedOption(null);
+    }
   };
 
   let content = null;
@@ -41,28 +79,14 @@ const Quiz = () => {
   }
 
   if (!isLoading && !isError && quizes?.length > 0) {
-    content = quizes.map((quiz) => (
+    content = (
       <SingleQuiz
-        key={quiz.id}
-        quiz={quiz}
-        handleQuizSubmit={handleQuizSubmit}
+        key={quizes[quizIndex].id}
+        quiz={quizes[quizIndex]}
+        handleOptionChange={handleOptionChange}
       />
-    ));
+    );
   }
-
-  const handleSubmit = () => {
-    submitQuiz({
-      student_id: userId,
-      student_name: userName,
-      video_id: videoId,
-      video_title: title,
-      totalQuiz,
-      totalMark,
-      totalCorrect,
-      totalWrong,
-      mark,
-    });
-  };
 
   return (
     <div>
@@ -76,11 +100,16 @@ const Quiz = () => {
             </p>
           </div>
           {content}
+
           <button
-            onClick={handleSubmit}
             className="px-4 py-2 rounded-full bg-cyan block ml-auto mt-8 hover:opacity-90 active:opacity-100 active:scale-95"
+            onClick={handleNextClick}
           >
-            <Link to={`/student/leaderboard/${userId}`}>Submit</Link>
+            {quizIndex === quizes.length - 1 ? (
+              <Link to={`/student/leaderboard/${userId}`}>Submit</Link>
+            ) : (
+              "Next"
+            )}
           </button>
         </div>
       </section>

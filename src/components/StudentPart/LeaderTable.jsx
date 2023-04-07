@@ -11,50 +11,52 @@ const LeaderTable = () => {
   const { user: loggedInUser } = useSelector((state) => state.auth) || {};
   const { id: userId, name: useName } = loggedInUser || {};
 
-  const quizMarkForUser = quizMarks.filter(
-    (quizMark) => quizMark.student_id === userId
+  const quizMarkForUser = quizMarks?.filter(
+    (quizMark) => quizMark?.student_id === userId
   );
   const totalMarkSumQuiz = quizMarkForUser.reduce(
-    (sum, quiz) => sum + quiz.totalMark,
+    (sum, quiz) => sum + quiz.mark,
     0
   );
 
-  const subTotalMarkAssignment = assignmentMarks.filter(
-    (assignmentMark) => assignmentMark.student_id === userId
+  const subTotalMarkAssignment = assignmentMarks?.filter(
+    (assignmentMark) => assignmentMark?.student_id === userId
   );
   const totalMarkSumAssignment = subTotalMarkAssignment.reduce(
-    (sum, assignmentMark) => sum + Number(assignmentMark.mark),
+    (sum, assignmentMark) => sum + Number(assignmentMark?.mark || 0),
     0
   );
 
   // Calculate total marks for each student
-  const studentMarks = quizMarks.reduce((marks, quizMark) => {
-    const studentId = quizMark.student_id;
+  const studentMarks = quizMarks?.reduce((marks, quizMark) => {
+    const studentId = quizMark?.student_id;
     if (!marks[studentId]) {
       marks[studentId] = {
         student_id: studentId,
-        student_name: quizMark.student_name,
+        student_name: quizMark?.student_name,
         quiz_total: 0,
         assignment_total: 0,
         total: 0,
       };
     }
-    marks[studentId].quiz_total += quizMark.totalMark;
+    marks[studentId].quiz_total += quizMark?.mark;
     return marks;
   }, {});
 
-  assignmentMarks.forEach((assignmentMark) => {
-    const studentId = assignmentMark.student_id;
+  assignmentMarks?.forEach((assignmentMark) => {
+    const studentId = assignmentMark?.student_id;
     if (!studentMarks[studentId]) {
       studentMarks[studentId] = {
         student_id: studentId,
-        student_name: assignmentMark.student_name,
+        student_name: assignmentMark?.student_name,
         quiz_total: 0,
         assignment_total: 0,
         total: 0,
       };
     }
-    studentMarks[studentId].assignment_total += Number(assignmentMark.mark);
+    studentMarks[studentId].assignment_total += Number(
+      assignmentMark?.mark || 0
+    );
     studentMarks[studentId].total =
       studentMarks[studentId].quiz_total +
       studentMarks[studentId].assignment_total;
@@ -65,7 +67,7 @@ const LeaderTable = () => {
     (a, b) => b.total - a.total
   );
 
-  const rank = sortedStudentMarks.findIndex(
+  const rank = sortedStudentMarks?.findIndex(
     (student) => student.student_id === userId
   );
 
@@ -93,9 +95,9 @@ const LeaderTable = () => {
             <td className="table-td text-center">{studentMark.student_name}</td>
             <td className="table-td text-center">{studentMark.quiz_total}</td>
             <td className="table-td text-center">
-              {studentMark.assignment_total}
+              {studentMark?.assignment_total}
             </td>
-            <td className="table-td text-center">{studentMark.total}</td>
+            <td className="table-td text-center">{studentMark?.total}</td>
           </tr>
         ))}
       </>
