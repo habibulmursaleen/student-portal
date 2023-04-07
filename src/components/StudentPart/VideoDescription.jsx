@@ -31,7 +31,8 @@ const VideoDescription = ({ video }) => {
 
   const quizSubmitted = quizMarks?.some(
     (quizMark) =>
-      quizMark?.student_id === userId && quizMark?.video_id === Number(videoId)
+      quizMark?.student_id === userId &&
+      Number(quizMark?.video_id) === Number(videoId)
   );
 
   const handleAssignmentClick = () => {

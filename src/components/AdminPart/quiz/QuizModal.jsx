@@ -138,25 +138,27 @@ const QuizModal = ({ handleCloseModal, showModal }) => {
                               )
                             }
                           />
-                          <input
-                            type="checkbox"
-                            checked={option.isCorrect}
-                            className="w-4 h-4"
-                            onChange={(e) =>
-                              handleOptionChange(
-                                index,
-                                "isCorrect",
-                                e.target.checked
-                              )
-                            }
-                          />
-                          <span className="ml-2">Correct</span>
+                          <div>
+                            <input
+                              type="checkbox"
+                              checked={option.isCorrect}
+                              className="w-4 h-4"
+                              onChange={(e) =>
+                                handleOptionChange(
+                                  index,
+                                  "isCorrect",
+                                  e.target.checked
+                                )
+                              }
+                            />
+                            <span className="ml-2">Correct</span>
+                          </div>
                         </div>
                       ))}
 
                       <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                         <button
-                          className="text-sm font-medium text-gray-700"
+                          className="btn ml-2 mt-3"
                           onClick={handleAddOption}
                         >
                           + Add Option

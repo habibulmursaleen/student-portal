@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../style/output.css";
 
-const SingleQuiz = ({ quiz }) => {
+const SingleQuiz = ({ quiz, handleQuizSubmit }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
 
   const handleOptionSelect = (optionId) => {
@@ -12,30 +12,19 @@ const SingleQuiz = ({ quiz }) => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const selectedOptionIds = selectedOptions.map((option) => parseInt(option));
-    const correctOptionIds = quiz.options
-      .filter((option) => option.isCorrect)
-      .map((option) => option.id);
-
-    const isCorrect =
-      selectedOptionIds.sort().toString() ===
-      correctOptionIds.sort().toString();
-
-    alert(isCorrect ? "Correct!" : "Incorrect!");
-  };
-
   return (
     <div className="space-y-8 ">
       <div className="quiz">
-        <h4 className="question">Quiz 1 - {quiz.question}</h4>
-        <form className="quizOptions" onSubmit={handleSubmit}>
+        <h4 className="question">Question - {quiz.question}</h4>
+        <div className="quizOptions">
           {quiz?.options?.map((quizOption) => (
-            <label htmlFor={`option${quizOption.id}_q${quiz.id}`}>
+            <label
+              key={quizOption.id}
+              htmlFor={`option${quizOption.id}_q${quiz.id}`}
+            >
               <input
                 type="checkbox"
+                key={quizOption.id}
                 id={`option${quizOption.id}_q${quiz.id}`}
                 onChange={() => handleOptionSelect(quizOption.id)}
                 checked={selectedOptions.includes(quizOption.id)}
@@ -43,8 +32,7 @@ const SingleQuiz = ({ quiz }) => {
               {quizOption.option}
             </label>
           ))}
-          <button type="submit">Submit</button>
-        </form>
+        </div>
       </div>
     </div>
   );

@@ -142,7 +142,7 @@ const QuizModal = ({ quiz, setShowModal, showModal }) => {
                         className="col-span-6 sm:col-span-3 lg:col-span-2"
                       >
                         <TextInput
-                          title={`Option ${option?.id + 1}`}
+                          title={`Option ${option?.id}`}
                           value={option?.option}
                           required
                           type="text"

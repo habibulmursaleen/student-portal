@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar";
@@ -17,8 +17,18 @@ const Quiz = () => {
   const { user: loggedInUser } = useSelector((state) => state.auth) || {};
   const { id: userId, name: userName } = loggedInUser || {};
   const { title } = video;
-  console.log(quizes);
   const totalQuiz = quizes?.length;
+  let totalMark = quizes?.length * 5;
+
+  const [mark, setMark] = useState(0);
+  const [totalCorrect, setTotalCorrect] = useState(0);
+  const [totalWrong, setTotalWrong] = useState(0);
+
+  const handleQuizSubmit = (marks) => {
+    setMark(totalCorrect * 5);
+    setTotalCorrect(1);
+    setTotalWrong(quizes?.length - totalCorrect);
+  };
 
   let content = null;
 
@@ -31,18 +41,28 @@ const Quiz = () => {
   }
 
   if (!isLoading && !isError && quizes?.length > 0) {
-    content = quizes.map((quiz) => <SingleQuiz key={quiz.id} quiz={quiz} />);
+    content = quizes.map((quiz) => (
+      <SingleQuiz
+        key={quiz.id}
+        quiz={quiz}
+        handleQuizSubmit={handleQuizSubmit}
+      />
+    ));
   }
 
-  // const handleSubmit = () => {
-  //   submitQuiz({
-  //     userId,
-  //     userName,
-  //     videoId,
-  //     title,
-  //     totalQuiz,
-  //   });
-  // };
+  const handleSubmit = () => {
+    submitQuiz({
+      student_id: userId,
+      student_name: userName,
+      video_id: videoId,
+      video_title: title,
+      totalQuiz,
+      totalMark,
+      totalCorrect,
+      totalWrong,
+      mark,
+    });
+  };
 
   return (
     <div>
@@ -57,7 +77,7 @@ const Quiz = () => {
           </div>
           {content}
           <button
-            // onClick={handleSubmit}
+            onClick={handleSubmit}
             className="px-4 py-2 rounded-full bg-cyan block ml-auto mt-8 hover:opacity-90 active:opacity-100 active:scale-95"
           >
             <Link to={`/student/leaderboard/${userId}`}>Submit</Link>
