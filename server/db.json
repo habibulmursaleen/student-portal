@@ -1,0 +1,383 @@
+{
+  "users": [
+    {
+      "email": "admin@learnwithsumit.com",
+      "password": "$2a$10$/TDPCTU28mFzKnSsW2pHSu512mpMKxLf8eiPbcTFLSNL87tbZBp3W",
+      "role": "admin",
+      "name": "LWS Admin",
+      "id": 1
+    },
+    {
+      "email": "saad.hasan@learnwithsumit.com",
+      "password": "$2a$10$4iJEmSkM1Dq6WMRb0SuJeeic1SEB9TrH3gw5IT441Adox/ZZXj2Ae",
+      "role": "student",
+      "name": "Saad Hasan",
+      "id": 2
+    },
+    {
+      "email": "akash.ahmed@learnwithsumit.com",
+      "password": "$2a$10$TNsYpL6ffKBrupNNvdJlleJlgIkp1C1xQJCbiv7HAl5Ggs.kucie2",
+      "role": "student",
+      "name": "Akash Ahmed",
+      "id": 3
+    },
+    {
+      "email": "md.salahuddin@learnwithsumit.com",
+      "password": "$2a$10$dcWjzIi4mLAERlWE4nfJW.1/mvC9FXqZU8A2V1rPlsqIrP3kWa8PG",
+      "role": "student",
+      "name": "Mohammad Salahuddin",
+      "id": 4
+    },
+    {
+      "email": "ferdous.shohag@learnwithsumit.com",
+      "password": "$2a$10$IZ6eXNauYSqMhl38Wc46texV2vjGZz.Zl66j7hrnW6ZDSDcMlPWeu",
+      "role": "student",
+      "name": "Ferdous",
+      "id": 5
+    },
+    {
+      "email": "riyadh.vai@learnwithsumit.com",
+      "password": "$2a$10$e4XPY48UpqmAj8teZ2je8.qd5AEk6hWm5PQwDoJsCsE91qlDPJx1G",
+      "role": "student",
+      "name": "Riyadh",
+      "id": 6
+    },
+    {
+      "email": "arif.almas@learnwithsumit.com",
+      "password": "$2a$10$NN4pXB4tBMw.ySrMDPMymepSGDdcvKzx/RjNCrdNTENOFVLWCWGOi",
+      "role": "student",
+      "name": "Arif",
+      "id": 7
+    },
+    {
+      "email": "habibulmursaleen97@gmail.com",
+      "password": "$2a$10$ICLpKWEuOokuVGea2G9i1uWoIIUv2Pna7lOgIFFq65TFSaD/l1LoC",
+      "role": "student",
+      "name": "S M Habibul Mursaleen Chowdhury",
+      "id": 8
+    }
+  ],
+  "videos": [
+    {
+      "title": "Debounce Function in JavaScript - JavaScript Job Interview question",
+      "description": "In this video, I have explained about the debounce function in JavaScript. This is a common question interviewers ask at Job Interviews. If you watch this video carefully, you will understand what is debounce and how to handle it with custom debounce function.",
+      "duration": "5:30",
+      "views": "51.2K",
+      "createdAt": "2023-04-05T09:28:23.965Z",
+      "url": "https://www.youtube.com/embed/dD9O8DnIBj4",
+      "id": 1
+    },
+    {
+      "title": "JavaScript Tips and Tricks",
+      "description": "https://www.youtube.com/embed/721mxZ3XHf8",
+      "duration": "91.2K",
+      "views": "31:30",
+      "createdAt": "2023-04-05T09:28:57.814Z",
+      "url": "JavaScript Tips and Tricks - JavaScript Job Interview Questions - Bangla Tutorial \\nIn this video, I have shown 8 more JavaScript pro tips that will make a JavaScript Developer's life easier.",
+      "id": 2
+    },
+    {
+      "title": "How to Manage User Roles in NextJS / NodeJS",
+      "description": "In this video, we'll look at how to manage user roles in NextJS or NodeJS. By understanding how user roles work, you'll be able to specify which role is able to access exactly which pages in your application.",
+      "duration": "12:10",
+      "views": "2,948",
+      "createdAt": "2023-04-05T09:29:52.648Z",
+      "url": "https://www.youtube.com/embed/yCJH72nZ8DI",
+      "id": 3
+    },
+    {
+      "title": "Master NextJS 13: Build and Deploy a Modern Full-Stack App in Just 5 Hours!",
+      "description": "In this free NextJS 13 course, we're building a complete full-stack API service website together. I chose this topic because it allows us to get a great feeling for how a frontend and backend work together in the new NextJS 13.",
+      "duration": "5:24:00",
+      "views": "93k",
+      "createdAt": "2023-04-05T09:30:40.131Z",
+      "url": "https://www.youtube.com/embed/4lUkSgvmTYM",
+      "id": 4
+    },
+    {
+      "title": "Learn React Query In 50 Minutes",
+      "description": "Learn React Today Course: https://courses.webdevsimplified.com/...\n\nTanStack Query (also known as React Query) is my favorite way to interact with an external API. TanStack query is so easy to use and it gives you so many features by default which I love. In this video I go over everything you need to know about TanStack query in order to start implementing it in your React projects.",
+      "duration": "51:08",
+      "views": "78k",
+      "createdAt": "2023-04-05T09:31:39.461Z",
+      "url": "https://www.youtube.com/embed/r8Dg0KVnfMA",
+      "id": 5
+    },
+    {
+      "title": "What is Server Side Rendering - Say hi to Next.js - Bangla ( বাংলা ) Tutorial",
+      "description": "আপনাদের অনেকেই আমাকে বারবার request করেছেন, Server Side Rendering কি জিনিস সেটা বুঝিয়ে একটা ভিডিও দিতে। সেই সাথে বর্তমান সময়ের trending react framework - Next.js কিভাবে কাজ করে, কেন ব্যবহার করব এসব নিয়ে ভিডিও request করেছিলেন অনেকে। তাই আজকের ভিডিওটি আমি আপনাদের request এ তৈরী করলাম।\nএই ভিডিওতে একদম সহজ ভাষায় আমি বুঝানোর চেষ্টা করেছি Server Side Rendering (SSR) কি। সেই সাথে Next.js কি, কিভাবে কাজ করে, এটা ব্যবহার করলে কি কি সুবিধা, Gatsby এর সাথে এটার পার্থক্য কি, এটার কি কি aswesome features আছে ইত্যাদি নিয়ে বিস্তারিত বলেছি। আশা করি আজকের ভিডিও দেখলে Server Side Rendering, Client Side Rendering (CSR) এবং Pre-rendering নিয়ে আপনাদের আর কোন confusion থাকবেনা।",
+      "duration": "34:59",
+      "views": "27,0.22",
+      "createdAt": "2023-04-05T09:51:37.869Z",
+      "url": "https://www.youtube.com/embed/721mxZ3XHf8",
+      "id": 6
+    },
+    {
+      "title": "Learn Vite – Frontend Build Tool Course",
+      "description": "Learn how to use Vite, a build tool and development server designed specifically for modern web development. This course covers various topics, including creating a static server, using templates, integrating Tailwind, using environment variables, deploying to GitHub, Netlify, and Vercel, and configuring Vite. It also discusses the features of Vite, including hot module replacement and static asset handling.",
+      "duration": "01:31:01",
+      "views": "57,898 ",
+      "createdAt": "2023-04-05T09:59:30.372Z",
+      "url": "https://www.youtube.com/embed/VAeRhmpcWEQ",
+      "id": 7
+    }
+  ],
+  "assignments": [
+    {
+      "title": "Debounce Function",
+      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
+      "totalMark": "100",
+      "video_id": "1",
+      "id": 1
+    },
+    {
+      "title": "JavaScript Tricks",
+      "video_title": "JavaScript Tips and Tricks",
+      "totalMark": "100",
+      "video_id": "2",
+      "id": 2
+    },
+    {
+      "title": "NextJS 13",
+      "video_title": "Master NextJS 13: Build and Deploy a Modern Full-Stack App in Just 5 Hours!",
+      "totalMark": "100",
+      "video_id": "4",
+      "id": 4
+    },
+    {
+      "title": "React Query ",
+      "video_title": "Learn React Query In 50 Minutes",
+      "totalMark": "100",
+      "video_id": "5",
+      "id": 5
+    },
+    {
+      "title": "Frontend Build ",
+      "video_title": "What is Server Side Rendering - Say hi to Next.js - Bangla ( বাংলা ) Tutorial",
+      "totalMark": "100",
+      "video_id": "6",
+      "id": 6
+    },
+    {
+      "title": "Manage",
+      "video_title": "How to Manage User Roles in NextJS / NodeJS",
+      "totalMark": "50",
+      "video_id": "3",
+      "id": 7
+    }
+  ],
+  "quizzes": [
+    {
+      "question": "Debounce Function",
+      "video_id": 1,
+      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
+      "options": [
+        {
+          "id": 1,
+          "option": "Debounce Function",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "option": "Debounce Function",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "option": "Debounce Function",
+          "isCorrect": false
+        }
+      ],
+      "id": 1
+    },
+    {
+      "question": "Tips and Tricks",
+      "video_id": 2,
+      "video_title": "JavaScript Tips and Tricks",
+      "options": [
+        {
+          "id": 1,
+          "option": "Tricks",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "option": "Tips",
+          "isCorrect": false
+        }
+      ],
+      "id": 2
+    },
+    {
+      "question": " Manage User Roles",
+      "video_id": 3,
+      "video_title": "How to Manage User Roles in NextJS / NodeJS",
+      "options": [
+        {
+          "id": 1,
+          "option": " Manage User Roles",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "option": " Manage Roles",
+          "isCorrect": false
+        }
+      ],
+      "id": 3
+    },
+    {
+      "question": "React Query",
+      "video_id": 5,
+      "video_title": "Learn React Query In 50 Minutes",
+      "options": [
+        {
+          "id": 1,
+          "option": "React Query",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "option": "React Query",
+          "isCorrect": false
+        }
+      ],
+      "id": 4
+    },
+    {
+      "question": "Frontend Build ",
+      "video_id": 7,
+      "video_title": "Learn Vite – Frontend Build Tool Course",
+      "options": [
+        {
+          "id": 1,
+          "option": "Frontend Build ",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "option": "Tool Course",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Tool",
+          "isCorrect": false
+        }
+      ],
+      "id": 5
+    }
+  ],
+  "assignmentMark": [
+    {
+      "student_id": 8,
+      "student_name": "S M Habibul Mursaleen Chowdhury",
+      "assignment_id": 1,
+      "title": "Debounce Function",
+      "createdAt": "2023-04-05T09:39:40.000Z",
+      "totalMark": "100",
+      "repo_link": "http://localhost:3000/videos/1",
+      "status": "published",
+      "id": 1,
+      "mark": 100
+    },
+    {
+      "student_id": 8,
+      "student_name": "S M Habibul Mursaleen Chowdhury",
+      "assignment_id": 2,
+      "title": "JavaScript Tricks",
+      "createdAt": "2023-04-05T09:39:46.900Z",
+      "totalMark": "100",
+      "repo_link": "http://localhost:3000/videos/1",
+      "status": "published",
+      "id": 2,
+      "mark": 100
+    },
+    {
+      "student_id": 8,
+      "student_name": "S M Habibul Mursaleen Chowdhury",
+      "assignment_id": 5,
+      "title": "React Query ",
+      "createdAt": "2023-04-05T09:42:15.817Z",
+      "totalMark": "100",
+      "repo_link": "http://localhost:3000/videos/5",
+      "status": "published",
+      "id": 3,
+      "mark": 100
+    },
+    {
+      "student_id": 8,
+      "student_name": "S M Habibul Mursaleen Chowdhury",
+      "assignment_id": 4,
+      "title": "NextJS 13",
+      "createdAt": "2023-04-05T09:42:20.318Z",
+      "totalMark": "100",
+      "repo_link": "http://localhost:3000/videos/5",
+      "status": "published",
+      "id": 4,
+      "mark": 100
+    },
+    {
+      "student_id": 3,
+      "student_name": "Akash Ahmed",
+      "assignment_id": 6,
+      "title": "Frontend Build ",
+      "createdAt": "2023-04-05T10:11:52.541Z",
+      "totalMark": "100",
+      "repo_link": "http://localhost:3000/videos/6",
+      "status": "published",
+      "id": 5,
+      "mark": "5555"
+    },
+    {
+      "student_id": 3,
+      "student_name": "Akash Ahmed",
+      "assignment_id": 7,
+      "title": "Manage",
+      "createdAt": "2023-04-05T10:13:46.876Z",
+      "totalMark": "50",
+      "repo_link": "http://localhost:3000/videos/3",
+      "status": "published",
+      "id": 6,
+      "mark": "55"
+    }
+  ],
+  "quizMark": [
+    {
+      "id": 1,
+      "student_id": 8,
+      "student_name": "S M Habibul Mursaleen Chowdhury",
+      "video_id": 1,
+      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
+      "totalQuiz": 2,
+      "totalCorrect": 1,
+      "totalWrong": 1,
+      "totalMark": 10,
+      "mark": 35
+    },
+    {
+      "id": 1,
+      "student_id": 8,
+      "student_name": "S M Habibul Mursaleen Chowdhury",
+      "video_id": 4,
+      "video_title": "Master NextJS 13: Build and Deploy a Modern Full-Stack App in Just 5 Hours!",
+      "totalQuiz": 2,
+      "totalCorrect": 1,
+      "totalWrong": 1,
+      "totalMark": 10,
+      "mark": 35
+    },
+    {
+      "id": 2,
+      "student_id": 3,
+      "student_name": "Akash Ahmed",
+      "video_id": 5,
+      "video_title": "Learn React Query In 50 Minutes",
+      "totalQuiz": 2,
+      "totalCorrect": 1,
+      "totalWrong": 1,
+      "totalMark": 10,
+      "mark": 5
+    }
+  ]
+}

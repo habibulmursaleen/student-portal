@@ -1,9 +1,8 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import PrivateRouteAdmin from "./components/routes/PrivateRouteAdmin";
-import PrivateRouteStudent from "./components/routes/PrivateRouteStudent";
-import PublicRouteAdmin from "./components/routes/PublicRouteAdmin";
-import PublicRouteStudent from "./components/routes/PublicRouteStudent";
-
+import PrivateRouteAdmin from "./components/route/PrivateRouteAdmin";
+import PrivateRouteStudent from "./components/route/PrivateRouteStudent";
+import PublicRouteAdmin from "./components/route/PublicRouteAdmin";
+import PublicRouteStudent from "./components/route/PublicRouteStudent";
 import useAuthCheck from "./hooks/useAuthCheck";
 
 import AdminLogin from "./pages/AdminDashboard/AdminLogin";
@@ -21,7 +20,6 @@ import StudentReistration from "./pages/StudentPortal/StudentReistration";
 
 function App() {
   const authChecked = useAuthCheck();
-
   return !authChecked ? (
     <div>Checking authentication....</div>
   ) : (
