@@ -39,6 +39,7 @@ const StudentReistration = () => {
         name,
         email,
         password,
+        role: "student",
       });
     }
   };
