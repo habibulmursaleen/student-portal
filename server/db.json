@@ -51,7 +51,7 @@
     },
     {
       "email": "habibulmursaleen97@gmail.com",
-      "password": "$2a$10$rCMLucIyd4l/mPtKdtVIdeBJRa9aQKSk/z3ywIO1bu5Ka5jOXSC0m",
+      "password": "$2a$10$TUfMxnzGMpg0FJat7kVV3ejY.mJgbCIevPBJcEJ7jKRgCChobOanG",
       "name": "S M Habibul Mursaleen Chowdhury",
       "role": "student",
       "id": 8
@@ -340,6 +340,17 @@
       "status": "published",
       "id": 6,
       "mark": "55"
+    },
+    {
+      "student_id": 8,
+      "student_name": "S M Habibul Mursaleen Chowdhury",
+      "assignment_id": 6,
+      "title": "Frontend Build ",
+      "createdAt": "2023-05-29T08:29:13.949Z",
+      "totalMark": "100",
+      "repo_link": "http://localhost:3000/videos/6",
+      "status": "pending",
+      "id": 7
     }
   ],
   "quizMark": [
@@ -378,6 +389,18 @@
       "totalWrong": 1,
       "totalMark": 10,
       "mark": 5
+    },
+    {
+      "student_id": 8,
+      "student_name": "S M Habibul Mursaleen Chowdhury",
+      "video_id": 5,
+      "video_title": "Learn React Query In 50 Minutes",
+      "totalQuiz": 1,
+      "totalMark": 5,
+      "totalCorrect": 1,
+      "totalWrong": 0,
+      "mark": 5,
+      "id": 3
     }
   ]
 }

@@ -11,6 +11,7 @@ const StudentReistration = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+  const role = "student";
 
   const [register, { data, isLoading, error: responseError }] =
     useRegisterMutation();
@@ -39,7 +40,7 @@ const StudentReistration = () => {
         name,
         email,
         password,
-        role: "student",
+        role,
       });
     }
   };
