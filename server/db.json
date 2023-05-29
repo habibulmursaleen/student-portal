@@ -55,6 +55,13 @@
       "name": "S M Habibul Mursaleen Chowdhury",
       "role": "student",
       "id": 8
+    },
+    {
+      "email": "habibulmursaleen@gmail.com",
+      "password": "$2a$10$leWtqT6fqqwMJZVAP.L0eerMPHUGB/QKo9Opd3wGNSXdbt7oZMO5a",
+      "name": "S M Habibul Mursaleen Chowdhury",
+      "role": "student",
+      "id": 9
     }
   ],
   "videos": [
@@ -120,16 +127,18 @@
       "createdAt": "2023-04-05T09:59:30.372Z",
       "url": "https://www.youtube.com/embed/VAeRhmpcWEQ",
       "id": 7
+    },
+    {
+      "title": "NextJS",
+      "description": "This is a new video",
+      "duration": "10:32",
+      "views": "4,566",
+      "createdAt": "2023-05-29T08:35:53.003Z",
+      "url": "https://www.youtube.com/watch?v=NgayZAuTgwM",
+      "id": 8
     }
   ],
   "assignments": [
-    {
-      "title": "Debounce Function",
-      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
-      "totalMark": "100",
-      "video_id": "1",
-      "id": 1
-    },
     {
       "title": "JavaScript Tricks",
       "video_title": "JavaScript Tips and Tricks",
@@ -184,7 +193,7 @@
         },
         {
           "id": 3,
-          "option": "Debounce Function",
+          "option": "Debounce Function 3",
           "isCorrect": false
         }
       ],
@@ -240,32 +249,13 @@
           "id": 2,
           "option": "React Query",
           "isCorrect": false
+        },
+        {
+          "option": "new Option",
+          "isCorrect": true
         }
       ],
       "id": 4
-    },
-    {
-      "question": "Frontend Build ",
-      "video_id": 7,
-      "video_title": "Learn Vite – Frontend Build Tool Course",
-      "options": [
-        {
-          "id": 1,
-          "option": "Frontend Build ",
-          "isCorrect": true
-        },
-        {
-          "id": 2,
-          "option": "Tool Course",
-          "isCorrect": false
-        },
-        {
-          "id": 3,
-          "option": "Tool",
-          "isCorrect": false
-        }
-      ],
-      "id": 5
     }
   ],
   "assignmentMark": [
@@ -349,8 +339,21 @@
       "createdAt": "2023-05-29T08:29:13.949Z",
       "totalMark": "100",
       "repo_link": "http://localhost:3000/videos/6",
-      "status": "pending",
-      "id": 7
+      "status": "published",
+      "id": 7,
+      "mark": "95"
+    },
+    {
+      "student_id": 9,
+      "student_name": "S M Habibul Mursaleen Chowdhury",
+      "assignment_id": 1,
+      "title": "Debounce Function",
+      "createdAt": "2023-05-29T08:34:27.391Z",
+      "totalMark": "100",
+      "repo_link": "https://www.youtube.com/watch?v=NgayZAuTgwM",
+      "status": "published",
+      "id": 8,
+      "mark": "45"
     }
   ],
   "quizMark": [
@@ -401,6 +404,30 @@
       "totalWrong": 0,
       "mark": 5,
       "id": 3
+    },
+    {
+      "student_id": 9,
+      "student_name": "S M Habibul Mursaleen Chowdhury",
+      "video_id": 2,
+      "video_title": "JavaScript Tips and Tricks",
+      "totalQuiz": 1,
+      "totalMark": 5,
+      "totalCorrect": 1,
+      "totalWrong": 0,
+      "mark": 5,
+      "id": 4
+    },
+    {
+      "student_id": 9,
+      "student_name": "S M Habibul Mursaleen Chowdhury",
+      "video_id": 7,
+      "video_title": "Learn Vite – Frontend Build Tool Course",
+      "totalQuiz": 1,
+      "totalMark": 5,
+      "totalCorrect": 0,
+      "totalWrong": 1,
+      "mark": 0,
+      "id": 5
     }
   ]
 }
