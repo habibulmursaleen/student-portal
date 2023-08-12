@@ -1,53 +1,18 @@
 {
   "users": [
     {
-      "email": "admin@learnwithsumit.com",
+      "email": "admin@learningportal.com",
       "password": "$2a$10$/TDPCTU28mFzKnSsW2pHSu512mpMKxLf8eiPbcTFLSNL87tbZBp3W",
       "role": "admin",
       "name": "LWS Admin",
       "id": 1
     },
     {
-      "email": "saad.hasan@learnwithsumit.com",
+      "email": "saad.hasan@learningportal.com",
       "password": "$2a$10$4iJEmSkM1Dq6WMRb0SuJeeic1SEB9TrH3gw5IT441Adox/ZZXj2Ae",
       "role": "student",
       "name": "Saad Hasan",
       "id": 2
-    },
-    {
-      "email": "akash.ahmed@learnwithsumit.com",
-      "password": "$2a$10$TNsYpL6ffKBrupNNvdJlleJlgIkp1C1xQJCbiv7HAl5Ggs.kucie2",
-      "role": "student",
-      "name": "Akash Ahmed",
-      "id": 3
-    },
-    {
-      "email": "md.salahuddin@learnwithsumit.com",
-      "password": "$2a$10$dcWjzIi4mLAERlWE4nfJW.1/mvC9FXqZU8A2V1rPlsqIrP3kWa8PG",
-      "role": "student",
-      "name": "Mohammad Salahuddin",
-      "id": 4
-    },
-    {
-      "email": "ferdous.shohag@learnwithsumit.com",
-      "password": "$2a$10$IZ6eXNauYSqMhl38Wc46texV2vjGZz.Zl66j7hrnW6ZDSDcMlPWeu",
-      "role": "student",
-      "name": "Ferdous",
-      "id": 5
-    },
-    {
-      "email": "riyadh.vai@learnwithsumit.com",
-      "password": "$2a$10$e4XPY48UpqmAj8teZ2je8.qd5AEk6hWm5PQwDoJsCsE91qlDPJx1G",
-      "role": "student",
-      "name": "Riyadh",
-      "id": 6
-    },
-    {
-      "email": "arif.almas@learnwithsumit.com",
-      "password": "$2a$10$NN4pXB4tBMw.ySrMDPMymepSGDdcvKzx/RjNCrdNTENOFVLWCWGOi",
-      "role": "student",
-      "name": "Arif",
-      "id": 7
     },
     {
       "email": "habibulmursaleen97@gmail.com",
@@ -55,13 +20,6 @@
       "name": "S M Habibul Mursaleen Chowdhury",
       "role": "student",
       "id": 8
-    },
-    {
-      "email": "habibulmursaleen@gmail.com",
-      "password": "$2a$10$leWtqT6fqqwMJZVAP.L0eerMPHUGB/QKo9Opd3wGNSXdbt7oZMO5a",
-      "name": "S M Habibul Mursaleen Chowdhury",
-      "role": "student",
-      "id": 9
     }
   ],
   "videos": [
