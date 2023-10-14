@@ -13,6 +13,7 @@ import Dashboard from "./pages/AdminDashboard/Dashboard";
 import Quizzes from "./pages/AdminDashboard/Quizzes";
 import Videos from "./pages/AdminDashboard/Videos";
 
+import LoadingPage from "./components/LoadingPage";
 import CoursePlayer from "./pages/StudentPortal/CoursePlayer";
 import Leaderboard from "./pages/StudentPortal/Leaderboard";
 import Quiz from "./pages/StudentPortal/Quiz";
@@ -29,6 +30,15 @@ function App() {
       <Routes>
         <Route
           path="/"
+          element={
+            <PublicRouteStudent>
+              <LoadingPage />
+            </PublicRouteStudent>
+          }
+        />
+
+        <Route
+          path="/student"
           element={
             <PublicRouteStudent>
               <StudentLogin />
