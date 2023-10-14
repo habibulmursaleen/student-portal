@@ -20,7 +20,7 @@ const LoadingPage = () => {
                   Student Login
                 </Link>
                 <Link className="link" to="/register">
-                  Student Reistration
+                  Student Registration
                 </Link>
               </div>
             </div>
